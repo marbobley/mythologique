@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mytho-Logique - Bar à Jeux{% endblock %}
+{% block title %}Mytho-Logique - Bar à Jeux Mythologique à Saint-André-de-Sangonis{% endblock %}
+
+{% block meta_description %}Bienvenue chez Mytho-Logique, le bar à jeux incontournable de Saint-André-de-Sangonis. Ambiance mythique, 500+ jeux, bières artisanales et snacks.{% endblock %}
 
 {% block body %}
     <!-- Hero Section -->
@@ -16,8 +18,8 @@
     <section id="games" class="py-5">
         <div class="container">
             <h2 class="text-center mytho-title section-title">Nos Jeux</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
+            <div class="row g-4 justify-content-center">
+                <div class="col-11 col-md-4">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <h3 class="mytho-title h5">Unlock!</h3>
@@ -25,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-11 col-md-4">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <h3 class="mytho-title h5">L'île interdite</h3>
@@ -33,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-11 col-md-4">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <h3 class="mytho-title h5">50 missions</h3>
@@ -49,31 +51,31 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-5 bg-black bg-opacity-25">
+    <section id="menu" class="py-5">
         <div class="container">
             <h2 class="text-center mytho-title section-title">La Taverne</h2>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-4 col-lg-2">
+                <div class="col-11 col-md-4 col-lg-2">
                     <div class="card h-100 bg-dark border-mytho-purple">
                         <img src="{{ asset('images/food/bierrevin.webp') }}" class="card-img-top img-clickable" alt="Bières et Vins" data-action="click->lightbox#open">
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2">
+                <div class="col-11 col-md-4 col-lg-2">
                     <div class="card h-100 bg-dark border-mytho-purple">
                         <img src="{{ asset('images/food/bierrebouteille.webp') }}" class="card-img-top img-clickable" alt="Bières Bouteille" data-action="click->lightbox#open">
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2">
+                <div class="col-11 col-md-4 col-lg-2">
                     <div class="card h-100 bg-dark border-mytho-purple">
                         <img src="{{ asset('images/food/softsnack.webp') }}" class="card-img-top img-clickable" alt="Softs et Snacks" data-action="click->lightbox#open">
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2">
+                <div class="col-11 col-md-4 col-lg-2">
                     <div class="card h-100 bg-dark border-mytho-purple">
                         <img src="{{ asset('images/food/boissonchaude.webp') }}" class="card-img-top img-clickable" alt="Boissons Chaudes" data-action="click->lightbox#open">
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2">
+                <div class="col-11 col-md-4 col-lg-2">
                     <div class="card h-100 bg-dark border-mytho-purple">
                         <img src="{{ asset('images/food/sucre.webp') }}" class="card-img-top img-clickable" alt="Douceurs" data-action="click->lightbox#open">
                     </div>
@@ -86,8 +88,8 @@
     <section id="contact" class="py-5">
         <div class="container">
             <h2 class="text-center mytho-title section-title">Contact</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
+            <div class="row justify-content-center">
+                <div class="col-11 col-md-6 mb-4">
                     <h4 class="mytho-title mb-3">Retrouvez-nous</h4>
                     <p><i class="bi bi-geo-alt-fill text-mytho-purple"></i>21 B RUE DE LA LUCQUE, 34725 SAINT-ANDRE-DE-SANGONIS</p>
                     <p><i class="bi bi-telephone-fill text-mytho-purple"></i> <a href="tel:0430968951" class="text-decoration-none text-dark">04 30 96 89 51</a></p>
@@ -100,8 +102,8 @@
                     <p><i class="bi bi-clock-fill text-mytho-purple"></i> Samedi : 15:30 - 00:00</p>
                     <p><i class="bi bi-clock-fill text-mytho-purple"></i> Dimanche : 15:30 - 00:00</p>
                 </div>
-                <div class="col-md-6">
-                    {{ ux_map(map, {style: 'height: 600px;'}) }}
+                <div class="col-11 col-md-6">
+                    {{ ux_map(map, {style: 'height: 600px; border-radius: 15px; overflow: hidden;'}) }}
                 </div>
             </div>
         </div>

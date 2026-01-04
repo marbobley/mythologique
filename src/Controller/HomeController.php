@@ -42,4 +42,20 @@ final class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/robots.txt', name: 'app_robots', defaults: ['_format' => 'txt'])]
+    public function robots(): Response
+    {
+        $response = $this->render('robots.txt.twig');
+        $response->headers->set('Content-Type', 'text/plain');
+        return $response;
+    }
+
+    #[Route('/sitemap.xml', name: 'app_sitemap', defaults: ['_format' => 'xml'])]
+    public function sitemap(): Response
+    {
+        $response = $this->render('sitemap.xml.twig');
+        $response->headers->set('Content-Type', 'application/xml');
+        return $response;
+    }
 }
