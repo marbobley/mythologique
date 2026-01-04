@@ -35,9 +35,15 @@ body {
     color: var(--mytho-purple-light) !important;
 }
 
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    filter: drop-shadow(0 0 5px var(--mytho-purple-light));
+}
+
 .hero-section {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/accueil.webp');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/accueil.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -45,6 +51,11 @@ body {
     justify-content: center;
     text-align: center;
     border-bottom: 3px double var(--mytho-purple);
+}
+
+.hero-section p.lead, a{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #ffffff !important;
 }
 
 .card {
