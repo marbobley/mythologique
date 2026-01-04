@@ -3,6 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block meta_description %}Mytho-Logique : Votre bar à jeux thématique à Saint-André-de-Sangonis. Découvrez plus de 500 jeux de société dans une ambiance mythologique unique.{% endblock %}">
+        <meta name="keywords" content="bar à jeux, mythologie, Saint-André-de-Sangonis, jeux de société, taverne, Hérault, divertissement">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ app.request.uri }}">
+        <meta property="og:title" content="{{ block('title') }}">
+        <meta property="og:description" content="{{ block('meta_description') }}">
+        <meta property="og:image" content="{{ absolute_url(asset('images/accueil.webp')) }}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="{{ app.request.uri }}">
+        <meta property="twitter:title" content="{{ block('title') }}">
+        <meta property="twitter:description" content="{{ block('meta_description') }}">
+        <meta property="twitter:image" content="{{ absolute_url(asset('images/accueil.webp')) }}">
+
         <title>{% block title %}Mytho-Logique - Bar à Jeux{% endblock %}</title>
         <link rel="icon" href="{{ asset("favicon.ico") }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
