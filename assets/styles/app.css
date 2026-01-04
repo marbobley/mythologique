@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+:root {
+    --mytho-gold: #d4af37;
+    --mytho-dark: #1a1a1a;
+    --mytho-white: #f5f5f5;
+    --mytho-marble: #e0e0e0;
+}
+
+body {
+    background-color: var(--mytho-dark);
+    color: var(--mytho-white);
+    font-family: 'Raleway', sans-serif;
+}
+
+.mytho-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    color: var(--mytho-gold) !important;
+}
+
+.navbar {
+    border-bottom: 2px solid var(--mytho-gold);
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--mytho-gold) !important;
+}
+
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581447100512-67b36199fffd?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px double var(--mytho-gold);
+}
+
+.card {
+    background-color: #2a2a2a;
+    border: 1px solid var(--mytho-gold);
+    color: var(--mytho-white);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-mytho {
+    background-color: transparent;
+    border: 2px solid var(--mytho-gold);
+    color: var(--mytho-gold);
+    font-family: 'Cinzel', serif;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-mytho:hover {
+    background-color: var(--mytho-gold);
+    color: var(--mytho-dark);
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: var(--mytho-gold);
+}
