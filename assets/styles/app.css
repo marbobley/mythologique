@@ -108,3 +108,17 @@ body {
 .border-mytho-purple {
     border-color: var(--mytho-purple-light) !important;
 }
+
+.img-clickable {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.img-clickable:hover {
+    opacity: 0.8;
+}
+
+.modal-content {
+    border-width: 2px;
+    box-shadow: 0 0 20px rgba(156, 77, 204, 0.5);
+}

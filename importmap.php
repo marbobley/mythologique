@@ -45,4 +45,7 @@ return [
     '@symfony/ux-leaflet-map' => [
         'path' => './vendor/symfony/ux-leaflet-map/assets/dist/map_controller.js',
     ],
+    'lightbox_controller' => [
+        'path' => './assets/controllers/lightbox_controller.js',
+    ],
 ];

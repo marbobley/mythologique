@@ -13,7 +13,7 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+    <body data-controller="lightbox">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
             <div class="container-fluid">
                 <a class="navbar-brand mytho-title d-flex align-items-center" href="{{ path('app_home') }}">
@@ -45,6 +45,20 @@
         <main>
             {% block body %}{% endblock %}
         </main>
+
+        <!-- Lightbox Modal -->
+        <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true" data-lightbox-target="modal">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content bg-dark border-mytho-purple">
+                    <div class="modal-header border-bottom-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 text-center">
+                        <img src="" alt="" class="img-fluid rounded-bottom" data-lightbox-target="image">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="bg-dark text-light py-4 mt-5 border-top border-mytho-purple">
             <div class="container text-center">
