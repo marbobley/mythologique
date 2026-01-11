@@ -1517,6 +1517,9 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         default_map_id?: scalar|null|Param, // Default: null
  *     },
  * }
+ * @psalm-type EntitiesVisitorBundleConfig = array{
+ *     enable?: bool|Param, // Default: true
+ * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
  *     parameters?: ParametersConfig,
@@ -1531,6 +1534,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     security?: SecurityConfig,
  *     monolog?: MonologConfig,
  *     ux_map?: UxMapConfig,
+ *     entities_visitor_bundle?: EntitiesVisitorBundleConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -1548,6 +1552,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         monolog?: MonologConfig,
  *         maker?: MakerConfig,
  *         ux_map?: UxMapConfig,
+ *         entities_visitor_bundle?: EntitiesVisitorBundleConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
@@ -1563,6 +1568,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
  *         ux_map?: UxMapConfig,
+ *         entities_visitor_bundle?: EntitiesVisitorBundleConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -1579,6 +1585,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
  *         ux_map?: UxMapConfig,
+ *         entities_visitor_bundle?: EntitiesVisitorBundleConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,
